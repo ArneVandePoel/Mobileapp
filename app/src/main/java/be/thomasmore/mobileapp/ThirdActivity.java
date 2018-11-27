@@ -27,7 +27,9 @@ public class ThirdActivity extends AppCompatActivity {
     public void GaNaarFourthActivity(View v)
     {
         Bundle bundle = new Bundle();
-        bundle.putString("type", type + v.getTag());
+        type += v.getTag() + "";
+        bundle.putString("type", type);
+
 
         Intent intent= new Intent(this, FourthActivity.class);
         intent.putExtras(bundle);

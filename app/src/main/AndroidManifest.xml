@@ -30,7 +30,8 @@
         <activity
             android:name=".FourthActivity"
             android:label="@string/title_activity_fourth"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".FifthActivity"></activity>
     </application>
 
 </manifest>
