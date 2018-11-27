@@ -7,8 +7,11 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.TextView;
 
 public class FourthActivity extends AppCompatActivity {
+
+    String type;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,10 +19,14 @@ public class FourthActivity extends AppCompatActivity {
         setContentView(R.layout.activity_fourth);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        Bundle bundle = getIntent().getExtras();
+        type = bundle.getString("type");
+        
     }
-    public void GaNaarSecondActivity(View v)
+    public void GaNaarFifthActivity(View v)
     {
-        Intent intent= new Intent(this, SecondActivity.class);
+        Intent intent= new Intent(this, FourthActivity.class);
         startActivity(intent);
     }
 

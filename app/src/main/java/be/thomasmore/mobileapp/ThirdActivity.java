@@ -11,6 +11,8 @@ import android.widget.TextView;
 
 public class ThirdActivity extends AppCompatActivity {
 
+    String type;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,14 +21,16 @@ public class ThirdActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         Bundle bundle = getIntent().getExtras();
-        String type = bundle.getString("type");
-        TextView textView = (TextView) findViewById(R.id.text);
-        textView.setText(type);
+        type = bundle.getString("type");
     }
 
-    public void GaNaarSecondActivity(View v)
+    public void GaNaarFourthActivity(View v)
     {
-        Intent intent= new Intent(this, SecondActivity.class);
+        Bundle bundle = new Bundle();
+        bundle.putString("type", type + v.getTag());
+
+        Intent intent= new Intent(this, FourthActivity.class);
+        intent.putExtras(bundle);
         startActivity(intent);
     }
 

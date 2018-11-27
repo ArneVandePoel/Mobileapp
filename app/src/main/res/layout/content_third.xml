@@ -8,6 +8,34 @@
     tools:context=".ThirdActivity"
     tools:showIn="@layout/activity_third">
 
-    
+    <Button
+        android:id="@+id/finaal"
+        android:tag="@string/button_finaal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:padding="20dp"
+        android:text="@string/button_finaal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:onClick="GaNaarFourthActivity"
+        />
+
+    <Button
+        android:id="@+id/initiaal"
+        android:tag="@string/button_initiaal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:padding="20dp"
+        android:text="@string/button_initiaal"
+        app:layout_constraintBottom_toBottomOf="@id/fronting"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:onClick="GaNaarFourthActivity"
+        />
 
 </android.support.constraint.ConstraintLayout>

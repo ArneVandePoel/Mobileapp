@@ -7,4 +7,6 @@
     <string name="title_mainActivity">START</string>
     <string name="button_fronting">Fronting</string>
     <string name="button_stopping">Stopping</string>
+    <string name="button_finaal">Finaal</string>
+    <string name="button_initiaal">Initiaal</string>
 </resources>
