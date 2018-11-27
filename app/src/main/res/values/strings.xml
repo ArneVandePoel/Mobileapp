@@ -5,4 +5,6 @@
     <string name="title_activity_third">ThirdActivity</string>
     <string name="title_activity_fourth">FourthActivity</string>
     <string name="title_mainActivity">START</string>
+    <string name="button_fronting">Fronting</string>
+    <string name="button_stopping">Stopping</string>
 </resources>

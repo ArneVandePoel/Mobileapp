@@ -18,9 +18,13 @@ public class SecondActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
     }
 
-    public void GaNaarSecondActivity(View v)
+    public void GaNaarThirdActivity(View v)
     {
-        Intent intent= new Intent(this, SecondActivity.class);
+        Bundle bundle = new Bundle();
+        bundle.putString("type", v.getTag() + "");
+
+        Intent intent= new Intent(this, ThirdActivity.class);
+        intent.putExtras(bundle);
         startActivity(intent);
     }
 

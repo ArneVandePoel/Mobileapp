@@ -8,4 +8,34 @@
     tools:context=".SecondActivity"
     tools:showIn="@layout/activity_second">
 
+    <Button
+        android:id="@+id/fronting"
+        android:tag="@string/button_fronting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:padding="20dp"
+        android:text="@string/button_fronting"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:onClick="GaNaarThirdActivity"
+        />
+
+    <Button
+        android:id="@+id/stopping"
+        android:tag="@string/button_stopping"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:padding="20dp"
+        android:text="@string/button_stopping"
+        app:layout_constraintBottom_toBottomOf="@id/fronting"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:onClick="GaNaarThirdActivity"
+        />
+
 </android.support.constraint.ConstraintLayout>

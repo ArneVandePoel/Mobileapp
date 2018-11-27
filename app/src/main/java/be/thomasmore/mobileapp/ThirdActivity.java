@@ -7,6 +7,7 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.TextView;
 
 public class ThirdActivity extends AppCompatActivity {
 
@@ -16,6 +17,11 @@ public class ThirdActivity extends AppCompatActivity {
         setContentView(R.layout.activity_third);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        Bundle bundle = getIntent().getExtras();
+        String type = bundle.getString("type");
+        TextView textView = (TextView) findViewById(R.id.text);
+        textView.setText(type);
     }
 
     public void GaNaarSecondActivity(View v)
