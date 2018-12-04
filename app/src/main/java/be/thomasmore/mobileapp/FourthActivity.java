@@ -6,6 +6,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -23,7 +24,8 @@ public class FourthActivity extends AppCompatActivity {
             {"K-T", "G-S", "NG-N"},
             {"K-T", "G-S/V"},
             {"S-T", "G-S/V"},
-            {"G-K", "S/Z-T", "F-T"}
+            {"G-K", "S/Z-T", "F-T"},
+            {"Oeps! Geen spelletjes gevonden. Duw op \"ga terug \" "}
     };
 
 
@@ -37,25 +39,33 @@ public class FourthActivity extends AppCompatActivity {
         Bundle bundle = getIntent().getExtras();
         type = bundle.getString("type");
 
-        if (type == "FrontingFinaal") {
+
+        if (type.equals("FrontingFinaal")) {
             kolom = 3;
             rij = 0;
+            maakLayout();
         }
-        if (type == "FrontingInitiaal"){
+        if (type.equals("FrontingInitiaal")){
             kolom = 2;
             rij = 1;
+            maakLayout();
         }
-        if(type =="StoppingFinaal")
+        if(type.equals("StoppingFinaal"))
         {
             kolom = 2;
             rij = 2;
+            maakLayout();
         }
-        if(type == "StoppingInitiaal")
+        if(type.equals("StoppingInitiaal"))
         {
             kolom = 3;
             rij = 3;
+            maakLayout();
         }
-        maakLayout();
+        else{
+            TextView textView = (TextView)findViewById(R.id.navigatieError);
+            textView.setText(doelklanken[4][0]);
+        }
     }
 
     private void maakLayout()
@@ -64,7 +74,7 @@ public class FourthActivity extends AppCompatActivity {
         for (int i = 0; i < kolom; i++)
         {
             Button button = new Button(this);
-            button.setText(doelklanken[rij][kolom]);
+            button.setText(doelklanken[rij][i]);
             button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
