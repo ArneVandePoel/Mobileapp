@@ -65,6 +65,14 @@ public class FourthActivity extends AppCompatActivity {
         }
     }
 
+    @Override
+    public void onStart() {
+
+        super.onStart();
+        Bundle bundle = getIntent().getExtras();
+        type = bundle.getString("type");
+    }
+
     private void maakLayout()
     {
         LinearLayout linearLayout = (LinearLayout)findViewById(R.id.linearLayout);
@@ -86,7 +94,11 @@ public class FourthActivity extends AppCompatActivity {
 
     public void GaNaarFifthActivity(View v)
     {
-        Intent intent= new Intent(this, FourthActivity.class);
+        Bundle bundle = new Bundle();
+        bundle.putString("type", type);
+        Log.i("Error", "gelukt");
+        Intent intent= new Intent(this, FifthActivity.class);
+        intent.putExtras(bundle);
         startActivity(intent);
     }
 }

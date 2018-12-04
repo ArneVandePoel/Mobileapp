@@ -9,4 +9,8 @@
     <string name="button_stopping">Stopping</string>
     <string name="button_finaal">Finaal</string>
     <string name="button_initiaal">Initiaal</string>
+    <string name="button_luister">Luister goed</string>
+    <string name="button_zeg">Zeg het zelf eens</string>
+    <string name="title_activity_test">testActivity</string>
+    <string name="title_activity_fifth">FifthActivity</string>
 </resources>
