@@ -19,7 +19,12 @@ public class ThirdActivity extends AppCompatActivity {
         setContentView(R.layout.activity_third);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+    }
 
+    @Override
+    public void onStart() {
+
+        super.onStart();
         Bundle bundle = getIntent().getExtras();
         type = bundle.getString("type");
     }

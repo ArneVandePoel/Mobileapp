@@ -44,19 +44,16 @@ public class FourthActivity extends AppCompatActivity {
             kolom = 3;
             rij = 0;
             maakLayout();
-        }
-        if (type.equals("FrontingInitiaal")){
+        } else if (type.equals("FrontingInitiaal")){
             kolom = 2;
             rij = 1;
             maakLayout();
-        }
-        if(type.equals("StoppingFinaal"))
+        } else if (type.equals("StoppingFinaal"))
         {
             kolom = 2;
             rij = 2;
             maakLayout();
-        }
-        if(type.equals("StoppingInitiaal"))
+        } else if (type.equals("StoppingInitiaal"))
         {
             kolom = 3;
             rij = 3;
@@ -75,6 +72,8 @@ public class FourthActivity extends AppCompatActivity {
         {
             Button button = new Button(this);
             button.setText(doelklanken[rij][i]);
+            button.setWidth(10);
+            button.setHeight(10);
             button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -90,5 +89,4 @@ public class FourthActivity extends AppCompatActivity {
         Intent intent= new Intent(this, FourthActivity.class);
         startActivity(intent);
     }
-
 }
