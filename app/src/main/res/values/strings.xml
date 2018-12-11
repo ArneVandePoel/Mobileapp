@@ -16,4 +16,5 @@
     <string name="title_activity_sixsth">SixsthActivity</string>
     <string name="title_activity_zeg">ZegActivity</string>
     <string name="title_activity_luiser">LuiserActivity</string>
+    <string name="begin_luister">Luister</string>
 </resources>

@@ -8,4 +8,19 @@
     tools:context=".LuiserActivity"
     tools:showIn="@layout/activity_luiser">
 
+    <Button
+        android:id="@+id/start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:padding="20dp"
+        android:text="@string/begin_luister"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:onClick="Luister"
+        style="@style/Widget.AppCompat.Button.Colored"
+        />
+
 </android.support.constraint.ConstraintLayout>

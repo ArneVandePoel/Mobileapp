@@ -12,6 +12,8 @@ import android.view.View;
 public class LuiserActivity extends AppCompatActivity {
 
     String reeks;
+    int geluid;
+    MediaPlayer mediaPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,9 +29,21 @@ public class LuiserActivity extends AppCompatActivity {
         super.onStart();
         Bundle bundle = getIntent().getExtras();
         reeks = bundle.getString("reeks");
-        int geluid = getResources().getIdentifier(reeks, "raw", getPackageName());
-        MediaPlayer mediaPlayer = MediaPlayer.create(this, geluid);
+        geluid = getResources().getIdentifier(reeks, "raw", getPackageName());
+    }
+
+    public void Luister(View v){
+        stopPlaying();
+        mediaPlayer = MediaPlayer.create(this, geluid);
         mediaPlayer.start();
+    }
+
+    private void stopPlaying() {
+        if (mediaPlayer != null) {
+            mediaPlayer.stop();
+            mediaPlayer.release();
+            mediaPlayer = null;
+        }
     }
 
 }
