@@ -28,6 +28,7 @@ public class SixsthActivity extends AppCompatActivity {
             {"sok-tok", "zak-tak"},
             {"fee-thee", "fien-tien"}
     };
+    String reeks;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -158,7 +159,15 @@ public class SixsthActivity extends AppCompatActivity {
     public void GaNaarLuister(View v)
     {
         Bundle bundle = new Bundle();
-        bundle.putString("type", type);
+        if (v.getTag().equals("sok-tok"))
+        {
+            reeks = "reeks7";
+        }
+        else if (v.getTag().equals("zak-tak"))
+        {
+            reeks = "reeks8";
+        }
+        bundle.putString("reeks", reeks);
         Intent intent= new Intent(this, FifthActivity.class);
         intent.putExtras(bundle);
         startActivity(intent);

@@ -11,6 +11,7 @@ import android.view.View;
 public class FifthActivity extends AppCompatActivity {
 
     String type;
+    String reeks;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +42,39 @@ public class FifthActivity extends AppCompatActivity {
             startActivity(intent);
         }
         else{
+            Bundle bundle = new Bundle();
+            if (type.equals("FrontingFinaalK-T")) {
+                reeks = "reeks1";
+            }
+            else if (type.equals("FrontingFinaalG-S")) {
+                reeks = "reeks3";
+            }
+            else if (type.equals("FrontingFinaalNG-N")) {
+                reeks = "reeks5";
+            }
+            else if (type.equals("FrontingInitiaalK-T")){
+                reeks = "reeks2";
+            }
+            else if (type.equals("FrontingInitiaalG-S/V")){
+                reeks = "reeks4";
+            }else if (type.equals("StoppingFinaalS-T"))
+            {
+                reeks = "reeks6";
+            }
+            else if (type.equals("StoppingFinaalCH-T"))
+            {
+                reeks = "reeks3";
+            }else if (type.equals("StoppingInitiaalG-K"))
+            {
+                reeks = "reeks4";
+            }
+            else if (type.equals("StoppingInitiaalF-T"))
+            {
+                reeks = "reeks9";
+            }
+            bundle.putString("reeks", reeks);
             Intent intent= new Intent(this, LuiserActivity.class);
+            intent.putExtras(bundle);
             startActivity(intent);
         }
     }
