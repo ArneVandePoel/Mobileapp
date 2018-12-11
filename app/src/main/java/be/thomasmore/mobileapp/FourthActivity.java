@@ -23,7 +23,7 @@ public class FourthActivity extends AppCompatActivity {
     String[][] doelklanken = new String[][]{
             {"K-T", "G-S", "NG-N"},
             {"K-T", "G-S/V"},
-            {"S-T", "G-S/V"},
+            {"S-T", "CH-T"},
             {"G-K", "S/Z-T", "F-T"},
             {"Oeps! Geen spelletjes gevonden. Duw op \"ga terug \" "}
     };
@@ -80,6 +80,7 @@ public class FourthActivity extends AppCompatActivity {
         {
             Button button = new Button(this);
             button.setText(doelklanken[rij][i]);
+            button.setTag(doelklanken[rij][i]);
             button.setWidth(10);
             button.setHeight(10);
             button.setOnClickListener(new View.OnClickListener() {
@@ -95,8 +96,8 @@ public class FourthActivity extends AppCompatActivity {
     public void GaNaarFifthActivity(View v)
     {
         Bundle bundle = new Bundle();
+        type += v.getTag() + "";
         bundle.putString("type", type);
-        Log.i("Error", "gelukt");
         Intent intent= new Intent(this, FifthActivity.class);
         intent.putExtras(bundle);
         startActivity(intent);

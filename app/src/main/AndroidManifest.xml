@@ -39,6 +39,18 @@
             android:name=".testActivity"
             android:label="@string/title_activity_test"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SixsthActivity"
+            android:label="@string/title_activity_sixsth"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ZegActivity"
+            android:label="@string/title_activity_zeg"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".LuiserActivity"
+            android:label="@string/title_activity_luiser"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

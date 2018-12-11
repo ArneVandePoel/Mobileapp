@@ -30,18 +30,29 @@ public class FifthActivity extends AppCompatActivity {
 
     public void GaNaarLuister(View v)
     {
-        Intent intent= new Intent(this, FourthActivity.class);
-        startActivity(intent);
+        if(type.equals("StoppingInitiaalS/Z-T"))
+        {
+            Bundle bundle = new Bundle();
+            type+= "luister";
+            bundle.putString("type", type);
+
+            Intent intent= new Intent(this,  SixsthActivity.class);
+            intent.putExtras(bundle);
+            startActivity(intent);
+        }
+        else{
+            Intent intent= new Intent(this, LuiserActivity.class);
+            startActivity(intent);
+        }
     }
 
     public void GaNaarSixsthActivity(View v)
     {
         Bundle bundle = new Bundle();
-        type += v.getTag() + "";
         bundle.putString("type", type);
 
 
-        Intent intent= new Intent(this, FourthActivity.class);
+        Intent intent= new Intent(this, SixsthActivity.class);
         intent.putExtras(bundle);
         startActivity(intent);
     }

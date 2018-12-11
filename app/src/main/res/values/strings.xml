@@ -13,4 +13,7 @@
     <string name="button_zeg">Zeg het zelf eens</string>
     <string name="title_activity_test">testActivity</string>
     <string name="title_activity_fifth">FifthActivity</string>
+    <string name="title_activity_sixsth">SixsthActivity</string>
+    <string name="title_activity_zeg">ZegActivity</string>
+    <string name="title_activity_luiser">LuiserActivity</string>
 </resources>
