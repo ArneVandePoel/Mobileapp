@@ -150,8 +150,9 @@ public class SixsthActivity extends AppCompatActivity {
     public void GaNaarZegHetEensZelf(View v)
     {
         Bundle bundle = new Bundle();
-        bundle.putString("type", type);
-        Intent intent= new Intent(this, FifthActivity.class);
+        String minimaalPaar = (String)v.getTag();
+        bundle.putString("mmp",minimaalPaar );
+        Intent intent= new Intent(this, ZegActivity.class);
         intent.putExtras(bundle);
         startActivity(intent);
     }

@@ -32,6 +32,13 @@ public class LuiserActivity extends AppCompatActivity {
         geluid = getResources().getIdentifier(reeks, "raw", getPackageName());
     }
 
+    public void onPause()
+    {
+        super.onPause();
+        stopPlaying();
+
+    }
+
     public void Luister(View v){
         stopPlaying();
         mediaPlayer = MediaPlayer.create(this, geluid);
