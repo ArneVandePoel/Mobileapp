@@ -1,18 +1,15 @@
 package be.thomasmore.mobileapp;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 public class ZegActivity extends AppCompatActivity {
 
     String woord1;
     String woord2;
+    String[] woorden;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,18 +23,16 @@ public class ZegActivity extends AppCompatActivity {
         super.onStart();
         Bundle bundle = getIntent().getExtras();
         String mmp = bundle.getString("mmp");
-        String[] woorden = mmp.split("-");
+        woorden = mmp.split("-");
         woord1 = woorden[0];
         woord2 = woorden[1];
 
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < 9; i++)
         {
-            ImageView imageView = getResources().getIdentifier("prent" + [i]);
+            ImageView imageView = (ImageView)findViewById(getResources().getIdentifier("prent" + i, "id", getPackageName()));
+            imageView.setImageResource(R.drawable.varken);
         }
     }
-
-
-
 
 
 }
