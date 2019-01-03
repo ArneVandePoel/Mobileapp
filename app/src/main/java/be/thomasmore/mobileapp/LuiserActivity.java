@@ -8,12 +8,14 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.media.MediaPlayer.OnCompletionListener;
 
 public class LuiserActivity extends AppCompatActivity {
 
     String reeks;
     int geluid;
     MediaPlayer mediaPlayer;
+    MediaPlayer flink;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +32,9 @@ public class LuiserActivity extends AppCompatActivity {
         Bundle bundle = getIntent().getExtras();
         reeks = bundle.getString("reeks");
         geluid = getResources().getIdentifier(reeks, "raw", getPackageName());
+        mediaPlayer = MediaPlayer.create(this, R.raw.spel1);
+        mediaPlayer.start();
+        flink = MediaPlayer.create(this, R.raw.flinkgeluisterd);
     }
 
     public void onPause()
@@ -42,7 +47,15 @@ public class LuiserActivity extends AppCompatActivity {
     public void Luister(View v){
         stopPlaying();
         mediaPlayer = MediaPlayer.create(this, geluid);
+        mediaPlayer.setOnCompletionListener(new OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                stopPlaying();
+                flink.start();
+            }
+        });
         mediaPlayer.start();
+
     }
 
     private void stopPlaying() {
