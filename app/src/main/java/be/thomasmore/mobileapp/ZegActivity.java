@@ -92,6 +92,8 @@ public class ZegActivity extends AppCompatActivity {
                     });
                 }
             }
+            mediaPlayer = MediaPlayer.create(this, R.raw.goedzo);
+            mediaPlayer.start();
         }else{
             ImageView imageView = (ImageView)findViewById(getResources().getIdentifier(tag, "id", getPackageName()));
             imageView.setImageResource(R.drawable.varken);
@@ -110,6 +112,9 @@ public class ZegActivity extends AppCompatActivity {
                     }
                 });
             }
+
+            mediaPlayer = MediaPlayer.create(this, R.raw.bijnagoednogeens);
+            mediaPlayer.start();
         }
     }
 

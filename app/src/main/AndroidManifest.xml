@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="be.thomasmore.mobileapp">
+    package="be.thomasmore.mobileapp"
+    android:versionName="Project3_App5v2"
+    android:versionCode="2">
+
+    <uses-sdk android:minSdkVersion="19" />
 
     <application
         android:allowBackup="true"
@@ -34,10 +38,6 @@
         <activity
             android:name=".FifthActivity"
             android:label="@string/title_activity_fifth"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".testActivity"
-            android:label="@string/title_activity_test"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".SixsthActivity"
