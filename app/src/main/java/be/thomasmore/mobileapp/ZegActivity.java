@@ -18,7 +18,8 @@ public class ZegActivity extends AppCompatActivity {
     String woord;
     MediaPlayer mediaPlayer;
     String tag;
-
+    int geluidJuist = getResources().getIdentifier("flinkgeluisterd", "raw", getPackageName());
+    int geluidFout = getResources().getIdentifier("fout", "raw", getPackageName());
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -70,7 +71,7 @@ public class ZegActivity extends AppCompatActivity {
         for (int i = 0; i < 2; i++)
         {
             ImageView imageantwoordView = (ImageView)findViewById(getResources().getIdentifier("antwoord" + i, "id", getPackageName()));
-            imageantwoordView.setImageResource(getResources().getIdentifier(woorden[i], "drawable", getPackageName()));
+            imageantwoordView.setImageResource(getResources().getIdentifier("optimized" + woorden[i], "drawable", getPackageName()));
             imageantwoordView.setTag(woorden[i]);
         }
     }

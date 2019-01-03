@@ -1,6 +1,8 @@
 package be.thomasmore.mobileapp;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -119,6 +121,9 @@ public class SixsthActivity extends AppCompatActivity {
             button.setTag(minimaalPaar[rij][i]);
             button.setWidth(10);
             button.setHeight(10);
+            button.setTextSize(22);
+            Typeface face = Typeface.createFromAsset(getAssets(), "font/grobold.ttf");
+            button.setTypeface(face);
             button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
