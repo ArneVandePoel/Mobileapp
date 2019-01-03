@@ -25,82 +25,100 @@
         android:layout_width="35sp"
         android:layout_height="35sp"
         android:id="@+id/prent0"
+        android:tag="prent0"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
         android:background="@color/colorSafariYellow"
         android:layout_marginRight="150dp"
+        android:onClick="Zeg"
         />
     <ImageView
         android:layout_width="35sp"
         android:layout_height="35sp"
         android:id="@+id/prent1"
+        android:tag="prent1"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
         android:background="@color/colorSafariYellow"
         android:layout_marginRight="150dp"
+        android:onClick="Zeg"
         />
     <ImageView
         android:layout_width="35sp"
         android:layout_height="35sp"
         android:id="@+id/prent2"
+        android:tag="prent2"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
         android:background="@color/colorSafariYellow"
         android:layout_marginRight="150dp"
+        android:onClick="Zeg"
         />
     <ImageView
         android:layout_width="35sp"
         android:layout_height="35sp"
         android:id="@+id/prent3"
+        android:tag="prent3"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
         android:background="@color/colorSafariYellow"
         android:layout_marginRight="150dp"
+        android:onClick="Zeg"
         />
     <ImageView
         android:layout_width="35sp"
         android:layout_height="35sp"
         android:id="@+id/prent4"
+        android:tag="prent4"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
         android:background="@color/colorSafariYellow"
         android:layout_marginRight="150dp"
+        android:onClick="Zeg"
         />
     <ImageView
         android:layout_width="35sp"
         android:layout_height="35sp"
         android:id="@+id/prent5"
+        android:tag="prent5"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
         android:background="@color/colorSafariYellow"
         android:layout_marginRight="150dp"
+        android:onClick="Zeg"
         />
     <ImageView
         android:layout_width="35sp"
         android:layout_height="35sp"
         android:id="@+id/prent6"
+        android:tag="prent6"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
         android:background="@color/colorSafariYellow"
         android:layout_marginRight="150dp"
+        android:onClick="Zeg"
         />
     <ImageView
         android:layout_width="35sp"
         android:layout_height="35sp"
         android:id="@+id/prent7"
+        android:tag="prent7"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
         android:background="@color/colorSafariYellow"
         android:layout_marginRight="150dp"
+        android:onClick="Zeg"
         />
     <ImageView
         android:layout_width="35sp"
         android:layout_height="35sp"
         android:id="@+id/prent8"
+        android:tag="prent8"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
         android:background="@color/colorSafariYellow"
         android:layout_marginRight="150dp"
+        android:onClick="Zeg"
         />
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
