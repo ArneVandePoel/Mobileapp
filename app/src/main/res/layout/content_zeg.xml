@@ -16,7 +16,7 @@
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="40dp"
             android:fontFamily="@font/grobold"
             android:gravity="center"
             android:text="Zeg het zelf eens"
@@ -120,5 +120,29 @@
         android:layout_marginRight="150dp"
         android:onClick="Zeg"
         />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60sp"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="35sp"
+            android:layout_height="35sp"
+            android:id="@+id/antwoord0"
+            android:tag="antwoord0"
+            android:layout_gravity="center"
+            android:background="@color/colorSafariYellow"
+            android:layout_marginRight="150dp"
+            android:onClick="Antwoord"
+            /><ImageView
+        android:layout_width="35sp"
+        android:layout_height="35sp"
+        android:id="@+id/antwoord1"
+        android:tag="antwoord1"
+        android:layout_gravity="center"
+        android:background="@color/colorSafariYellow"
+        android:layout_marginRight="150dp"
+        android:onClick="Antwoord"
+        />
+    </LinearLayout>
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

@@ -1,5 +1,6 @@
 package be.thomasmore.mobileapp;
 
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -41,6 +42,12 @@ public class ZegActivity extends AppCompatActivity {
             imageView.setImageResource(R.drawable.varken);
         }
 
+        for (int i = 0; i < 2; i++)
+        {
+            ImageView imageantwoordView = (ImageView)findViewById(getResources().getIdentifier("antwoord" + i, "id", getPackageName()));
+            imageantwoordView.setImageResource(R.drawable.play);
+        }
+
         mediaPlayer = MediaPlayer.create(this, R.raw.spel3);
         mediaPlayer.start();
     }
@@ -55,6 +62,57 @@ public class ZegActivity extends AppCompatActivity {
         tag = v.getTag() + "";
         ImageView imageView = (ImageView)findViewById(getResources().getIdentifier(tag, "id", getPackageName()));
         imageView.setImageResource(getResources().getIdentifier(woord, "drawable", getPackageName()));
+        for (int i = 0; i < 9; i++)
+        {
+            ImageView imageallView = (ImageView)findViewById(getResources().getIdentifier("prent" + i, "id", getPackageName()));
+            imageallView.setOnClickListener(null);
+        }
+        for (int i = 0; i < 2; i++)
+        {
+            ImageView imageantwoordView = (ImageView)findViewById(getResources().getIdentifier("antwoord" + i, "id", getPackageName()));
+            imageantwoordView.setImageResource(getResources().getIdentifier(woorden[i], "drawable", getPackageName()));
+            imageantwoordView.setTag(woorden[i]);
+        }
+    }
+
+    public void Antwoord(View v){
+        if (woord == v.getTag()){
+            for (int i = 0; i < 2; i++)
+            {
+                ImageView imageantwoordView = (ImageView)findViewById(getResources().getIdentifier("antwoord" + i, "id", getPackageName()));
+                imageantwoordView.setImageResource(R.drawable.play);
+                imageantwoordView.setTag("antwoord" + i);
+            }
+            for (int i = 0; i < 9; i++)
+            {
+                if ("prent" + i != tag) {
+                    ImageView imageallView = (ImageView) findViewById(getResources().getIdentifier("prent" + i, "id", getPackageName()));
+                    imageallView.setOnClickListener(new View.OnClickListener() {
+                        public void onClick(View v) {
+                            Zeg(v);
+                        }
+                    });
+                }
+            }
+        }else{
+            ImageView imageView = (ImageView)findViewById(getResources().getIdentifier(tag, "id", getPackageName()));
+            imageView.setImageResource(R.drawable.varken);
+            for (int i = 0; i < 2; i++)
+            {
+                ImageView imageantwoordView = (ImageView)findViewById(getResources().getIdentifier("antwoord" + i, "id", getPackageName()));
+                imageantwoordView.setImageResource(R.drawable.play);
+                imageantwoordView.setTag("antwoord" + i);
+            }
+            for (int i = 0; i < 9; i++)
+            {
+                ImageView imageallView = (ImageView)findViewById(getResources().getIdentifier("prent" + i, "id", getPackageName()));
+                imageallView.setOnClickListener(new View.OnClickListener() {
+                    public void onClick(View v) {
+                        Zeg(v);
+                    }
+                });
+            }
+        }
     }
 
     public void onPause()
