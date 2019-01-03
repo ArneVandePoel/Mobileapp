@@ -6,21 +6,31 @@
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".LuiserActivity"
-    tools:showIn="@layout/activity_luiser">
+    tools:showIn="@layout/activity_luiser"
+    android:background="@drawable/farm">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="Luister goed!"
+        android:textSize="50dp"
+        android:layout_marginBottom="400dp"
+        android:fontFamily="@font/grobold"/>
     <Button
         android:id="@+id/start"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAlignment="center"
         android:padding="20dp"
-        android:text="@string/begin_luister"
+        android:drawableLeft="@drawable/play"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:onClick="Luister"
-        style="@style/Widget.AppCompat.Button.Colored"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_marginBottom="100dp"
         />
 
 </android.support.constraint.ConstraintLayout>

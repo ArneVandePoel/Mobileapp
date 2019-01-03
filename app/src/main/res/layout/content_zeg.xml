@@ -6,51 +6,101 @@
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".ZegActivity"
-    tools:showIn="@layout/activity_zeg">
+    tools:showIn="@layout/activity_zeg"
+    android:background="@drawable/backgroundfield">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:fontFamily="@font/grobold"
+            android:gravity="center"
+            android:text="Zeg het zelf eens"
+            android:textSize="22dp" />
     <ImageView
-        android:layout_width="50sp"
-        android:layout_height="50sp"
+        android:layout_width="35sp"
+        android:layout_height="35sp"
         android:id="@+id/prent0"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@color/colorSafariYellow"
+        android:layout_marginRight="150dp"
         />
     <ImageView
-        android:layout_width="50sp"
-        android:layout_height="50sp"
+        android:layout_width="35sp"
+        android:layout_height="35sp"
         android:id="@+id/prent1"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorSafariYellow"
+        android:layout_marginRight="150dp"
         />
     <ImageView
-        android:layout_width="50sp"
-        android:layout_height="50sp"
+        android:layout_width="35sp"
+        android:layout_height="35sp"
         android:id="@+id/prent2"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorSafariYellow"
+        android:layout_marginRight="150dp"
         />
     <ImageView
-        android:layout_width="50sp"
-        android:layout_height="50sp"
+        android:layout_width="35sp"
+        android:layout_height="35sp"
         android:id="@+id/prent3"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorSafariYellow"
+        android:layout_marginRight="150dp"
         />
     <ImageView
-        android:layout_width="50sp"
-        android:layout_height="50sp"
+        android:layout_width="35sp"
+        android:layout_height="35sp"
         android:id="@+id/prent4"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorSafariYellow"
+        android:layout_marginRight="150dp"
         />
     <ImageView
-        android:layout_width="50sp"
-        android:layout_height="50sp"
+        android:layout_width="35sp"
+        android:layout_height="35sp"
         android:id="@+id/prent5"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorSafariYellow"
+        android:layout_marginRight="150dp"
         />
     <ImageView
-        android:layout_width="50sp"
-        android:layout_height="50sp"
+        android:layout_width="35sp"
+        android:layout_height="35sp"
         android:id="@+id/prent6"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorSafariYellow"
+        android:layout_marginRight="150dp"
         />
     <ImageView
-        android:layout_width="50sp"
-        android:layout_height="50sp"
+        android:layout_width="35sp"
+        android:layout_height="35sp"
         android:id="@+id/prent7"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorSafariYellow"
+        android:layout_marginRight="150dp"
         />
     <ImageView
-        android:layout_width="50sp"
-        android:layout_height="50sp"
+        android:layout_width="35sp"
+        android:layout_height="35sp"
         android:id="@+id/prent8"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorSafariYellow"
+        android:layout_marginRight="150dp"
         />
+    </LinearLayout>
 </android.support.constraint.ConstraintLayout>

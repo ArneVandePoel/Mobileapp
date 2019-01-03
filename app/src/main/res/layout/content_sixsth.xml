@@ -6,8 +6,8 @@
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".SixsthActivity"
-    tools:showIn="@layout/activity_sixsth">
-
+    tools:showIn="@layout/activity_sixsth"
+    android:background="@drawable/background_main_three">
 
     <LinearLayout
         android:layout_width="wrap_content"

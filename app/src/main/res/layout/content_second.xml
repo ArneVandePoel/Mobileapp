@@ -6,36 +6,57 @@
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".SecondActivity"
-    tools:showIn="@layout/activity_second">
+    tools:showIn="@layout/activity_second"
+    android:background="@drawable/background_main_three"
+    >
 
     <Button
         android:id="@+id/fronting"
-        android:tag="@string/button_fronting"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:padding="24dp"
+        android:tag="@string/button_fronting"
+        android:text="@string/button_fronting"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@id/luister"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="22dp"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:fontFamily="@font/grobold"
+        android:textColor="@color/colorSafariYellow"
+        android:layout_marginTop="220dp"
+        android:onClick="GaNaarThirdActivity"/>
+
+    <Button
+        android:id="@+id/stopping"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:layout_marginTop="180dp"
+        android:tag="@string/button_stopping"
+        android:text="@string/button_stopping"
         android:textAlignment="center"
         android:padding="20dp"
-        android:text="@string/button_fronting"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:onClick="GaNaarThirdActivity"
-        />
+        android:textSize="22dp"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:fontFamily="@font/grobold"
+        android:textColor="@color/colorSafariYellow"
+        android:onClick="GaNaarThirdActivity"/>
 
-    <Button
-        android:id="@+id/stopping"
-        android:tag="@string/button_stopping"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:padding="20dp"
-        android:text="@string/button_stopping"
-        app:layout_constraintBottom_toBottomOf="@id/fronting"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:onClick="GaNaarThirdActivity"
+    <TextView
+        android:id="@+id/textViewWatWilJeOefenen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fontFamily="@font/grobold"
+        android:text="Wat wil je oefenen?"
+        android:textSize="22dp"
+        android:layout_marginBottom="200dp"
+        android:gravity="center"
         />
 
 </android.support.constraint.ConstraintLayout>
