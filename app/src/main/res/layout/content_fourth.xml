@@ -21,7 +21,4 @@
         android:id="@+id/linearLayout"
         android:orientation="vertical">
     </LinearLayout>
-
-
-
 </android.support.constraint.ConstraintLayout>

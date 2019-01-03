@@ -1,24 +1,21 @@
 package be.thomasmore.mobileapp;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-
-import java.util.ArrayList;
 
 public class FourthActivity extends AppCompatActivity {
 
     String type;
     int kolom;
     int rij;
+    int safariColor = Color.parseColor("#E8AB38");
 
     String[][] doelklanken = new String[][]{
             {"K-T", "G-S", "NG-N"},
@@ -83,6 +80,11 @@ public class FourthActivity extends AppCompatActivity {
             button.setTag(doelklanken[rij][i]);
             button.setWidth(10);
             button.setHeight(10);
+            button.setBackgroundColor(safariColor);
+            button.setTextColor(Color.BLACK);
+            button.setTextSize(25);
+            button.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT,
+                    LinearLayout.LayoutParams.WRAP_CONTENT));
             button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

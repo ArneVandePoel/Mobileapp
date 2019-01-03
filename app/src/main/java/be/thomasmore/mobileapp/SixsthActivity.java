@@ -2,17 +2,12 @@ package be.thomasmore.mobileapp;
 
 import android.content.Intent;
 import android.graphics.Color;
-import android.graphics.Typeface;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 
 public class SixsthActivity extends AppCompatActivity {
 
@@ -31,6 +26,7 @@ public class SixsthActivity extends AppCompatActivity {
             {"fee-thee", "fien-tien"}
     };
     String reeks;
+    int safariColor = Color.parseColor("#E8AB38");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -121,9 +117,10 @@ public class SixsthActivity extends AppCompatActivity {
             button.setTag(minimaalPaar[rij][i]);
             button.setWidth(10);
             button.setHeight(10);
-            button.setTextSize(22);
-            Typeface face = Typeface.createFromAsset(getAssets(), "font/grobold.ttf");
-            button.setTypeface(face);
+            button.setBackgroundColor(safariColor);
+            button.setTextColor(Color.BLACK);
+            button.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT,
+                    LinearLayout.LayoutParams.WRAP_CONTENT));
             button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -140,8 +137,11 @@ public class SixsthActivity extends AppCompatActivity {
             Button button = new Button(this);
             button.setText(minimaalPaar[rij][i]);
             button.setTag(minimaalPaar[rij][i]);
-            button.setWidth(10);
+            button.setWidth(30);
             button.setHeight(10);
+            button.setBackgroundColor(safariColor);
+            button.setTextColor(Color.BLACK);
+            button.setTextSize(25);
             button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

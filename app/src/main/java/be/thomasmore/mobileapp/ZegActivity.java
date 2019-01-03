@@ -1,6 +1,5 @@
 package be.thomasmore.mobileapp;
 
-import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -18,8 +17,6 @@ public class ZegActivity extends AppCompatActivity {
     String woord;
     MediaPlayer mediaPlayer;
     String tag;
-    int geluidJuist = getResources().getIdentifier("flinkgeluisterd", "raw", getPackageName());
-    int geluidFout = getResources().getIdentifier("fout", "raw", getPackageName());
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
